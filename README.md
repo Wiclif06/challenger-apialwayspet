@@ -2,9 +2,10 @@
 
 Grupo: AlwaysPet
 
-Participante: Felipe Wiclif Leal da Silva - RM 563901
+```text
+Participante: Felipe Wiclif Leal da Silva - RM 563901,
 Outro aluno saiu da FIAP no mês 03.
-
+```
 ## Objetivo da disciplina
 
 API REST para controlar responsáveis, pets, vacinas, medicações, alertas e acompanhamentos de saúde. A API foi organizada para demonstrar CRUD, regras de negócio, validações, DTOs, paginação, ordenação, busca com parâmetros, cache, tratamento de erros e documentação Swagger.
