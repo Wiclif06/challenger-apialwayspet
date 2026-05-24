@@ -8,6 +8,8 @@ import br.com.alwayspet.api.dto.PetResponse;
 import br.com.alwayspet.api.exception.RegistroNaoEncontradoException;
 import br.com.alwayspet.api.repository.PetRepository;
 import br.com.alwayspet.api.repository.ResponsavelRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
@@ -16,6 +18,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PetService {
+
+    private static final Logger log = LoggerFactory.getLogger(PetService.class);
 
     private final PetRepository petRepository;
     private final ResponsavelRepository responsavelRepository;
@@ -27,6 +31,8 @@ public class PetService {
 
     @Cacheable("pets")
     public Page<PetResponse> listar(String nome, Especie especie, Pageable pageable) {
+        log.info("Listando pets. Filtro nome: {}, espécie: {}", nome, especie);
+
         Page<Pet> page;
 
         if (nome != null && !nome.isBlank() && especie != null) {
@@ -41,11 +47,14 @@ public class PetService {
     }
 
     public PetResponse buscar(Long id) {
+        log.info("Buscando pet ID: {}", id);
         return toResponse(getPet(id));
     }
 
     @CacheEvict(value = "pets", allEntries = true)
     public PetResponse criar(PetRequest request) {
+        log.info("Cadastrando pet: {}", request.nome());
+
         Responsavel responsavel = buscarResponsavel(request.responsavelId());
 
         Pet pet = new Pet();
@@ -57,6 +66,8 @@ public class PetService {
 
     @CacheEvict(value = "pets", allEntries = true)
     public PetResponse atualizar(Long id, PetRequest request) {
+        log.info("Atualizando pet ID: {}", id);
+
         Pet pet = getPet(id);
         Responsavel responsavel = buscarResponsavel(request.responsavelId());
 
@@ -68,6 +79,7 @@ public class PetService {
 
     @CacheEvict(value = "pets", allEntries = true)
     public void remover(Long id) {
+        log.info("Removendo pet ID: {}", id);
         petRepository.delete(getPet(id));
     }
 
