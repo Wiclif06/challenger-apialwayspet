@@ -1,0 +1,21 @@
+{
+  "info": {
+    "name": "AlwaysPet Java API"
+  },
+  "item": [
+    {
+      "name": "Listar pets",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/pets?page=0&size=10&sort=nome,asc"
+      }
+    },
+    {
+      "name": "Buscar pet",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/pets/1"
+      }
+    }
+  ]
+}
