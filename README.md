@@ -72,7 +72,7 @@ src/main/java/br/com/alwayspet/api
 
 A aplicação foi organizada seguindo arquitetura em camadas.
 
-![Estrutura do Projeto](docs/estrutura-intelliJ.png)
+![Estrutura do Projeto](docs/estrutura_intelliJ.png)
 
 
 ## Swagger / AlwaysPet API
