@@ -64,6 +64,62 @@ src/main/java/br/com/alwayspet/api
 ├── exception
 └── config
 ```
+---
+
+# Evidências do Projeto
+
+## Estrutura do Projeto
+
+A aplicação foi organizada seguindo arquitetura em camadas.
+
+![Estrutura do Projeto](docs/estrutura-intelliJ.png)
+
+
+## Swagger / AlwaysPet API
+
+Documentação da API utilizando Swagger/AlwaysPet API.
+
+![Swagger](docs/swagger-home.png)
+
+
+## Cadastro de Pet
+
+Exemplo de cadastro de pet realizado pela API.
+
+![POST Pet](docs/swagger-post-pet.png)
+
+
+## Busca de Pet por ID
+
+Consulta de pet utilizando endpoint GET.
+
+![GET Pet](docs/swagger-get-pet.png)
+
+
+## Atualização de Pet
+
+Atualização de dados do pet utilizando endpoint PUT.
+
+![PUT Pet](docs/swagger-put-pet parte 1.png)
+![PUT Pet](docs/swagger-put-pet parte 2.png)
+
+
+## Tratamento de Erros
+
+Tratamento de exceções implementado para retorno padronizado da API.
+
+![Erro 404](docs/swagger-erro-404.png)
+
+
+## Banco de Dados H2
+
+Consulta realizada diretamente no banco H2 em memória.
+
+![H2 Console](docs/h2.png)
+![H2 Console](docs/h2_tb_alerta.png)
+![H2 Console](docs/h2_tb_pet.png)
+![H2 Console](docs/h2_tb_responsavel.png)
+![H2 Console](docs/h2.png)
 
 ## Camadas
 

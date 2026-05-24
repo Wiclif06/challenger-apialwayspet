@@ -22,6 +22,6 @@ public class OpenApiConfig {
                                 .email("felipewicliflealdasilva@gmail.com")))
                 .externalDocs(new ExternalDocumentation()
                         .description("Repositório do projeto AlwaysPet")
-                        .url("https://github.com/Wiclif06/challenger-apialwayspet"));
+                        .url("hhttps://github.com/Wiclif06/challenger-apialwayspet"));
     }
 }
